@@ -22,7 +22,7 @@ def get_candidates_by_name(candidate_name: str) -> List[dict]:
 	return result
 
 
-def get_candidates_by_skill(skill_name: str):
+def get_candidates_by_skill(skill_name: str) -> List[dict]:
 	result = []
 	for candidate in load_candidates_from_json():
 		if skill_name.lower() in candidate["skills"].lower().split(", "):
